@@ -1,0 +1,686 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+
+::-webkit-scrollbar {
+  width: 20px;
+  /* height: 15px; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0613fb; 
+  border-radius: 5px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #030f4f; 
+}
+
+
+body{
+    overflow: hidden;
+}
+.loading{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+}
+.sk-folding-cube {
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  }
+}
+.option{
+     position: fixed;
+    top: 40%;
+    left: -300px;
+    z-index: 999;
+}
+.option i{
+    font-size: 3rem
+
+}
+.option img{
+    width: 30px;
+    
+
+}
+.opitions{
+    width: 300px;
+    height: 200px;
+   
+}
+/* .opitions ul{
+    list-style: outside; 
+    
+} 
+    
+     */
+
+.opitions li {
+    /* list-style: none; */
+    width: 3rem;
+    text-decoration: none;
+
+    /* z-index: 9999; */
+
+}
+#btn-up{
+    position: fixed;
+right: 20px;
+bottom:20px;
+display: none;
+}
+/*-------NAV--------*/
+nav {
+    /* position: fixed; */
+    top: .625rem;
+    right: 0;
+    left: 0;
+    transition: all 1s ;
+    text-align: center ;
+}
+
+nav .contener {
+    width: 80%;
+    margin: auto;
+    display: flex;
+
+    height: 100%;
+}
+
+nav .contener .list-item {
+    width: 45%;
+
+}
+
+nav .contener .list-item ul {
+    height: 100%;
+}
+
+nav .contener .list-item ul li a {
+    position: relative;
+}
+
+nav .contener .list-item ul li a::after {
+    content: '';
+    position: absolute;
+    width: 1.875rem;
+    height: .0625rem;
+    left: 0;
+    bottom: 0;
+}
+
+/* ============ Home ========== */
+.home {
+    background-image: url(../img/bg.jpg);
+
+    background-size: cover;
+    height: 100vh;
+}
+
+.bg-layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 100%;
+}
+
+.home-caption h1 {
+    font-size: 3.125rem;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+.home-caption h5 {
+    margin: 2rem 0;
+    font-size: 4rem;
+    font-weight: 100;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+}
+
+.home-caption h5::after {
+    content: '';
+    font-weight: bolder;
+    animation: typing 10s ease infinite;
+}
+
+@keyframes typing {
+
+    0% {
+        content: '|';
+    }
+
+    1% {
+        content: 'D|';
+    }
+
+    2% {
+        content: 'De|';
+    }
+
+    3% {
+        content: 'Dev|';
+    }
+
+    4% {
+        content: 'Deve|';
+    }
+
+    5% {
+        content: 'Devel|';
+    }
+
+    6% {
+        content: 'Develo|';
+    }
+
+    7% {
+        content: 'Develop|';
+    }
+
+    8% {
+        content: 'Develope|';
+    }
+
+    9% {
+        content: 'Developer|';
+    }
+
+    10% {
+        content: 'Developer|';
+    }
+
+    11% {
+        content: 'Develope|';
+
+
+
+    }
+
+    12% {
+        content: 'Develop|';
+    }
+
+    14% {
+        content: 'Develo|';
+    }
+
+    16% {
+        content: 'Devel|';
+    }
+
+    18% {
+        content: 'Deve|';
+    }
+
+    20% {
+        content: 'Dev|';
+    }
+
+    22% {
+        content: 'De|';
+    }
+
+    23% {
+        content: 'D|';
+    }
+
+    24% {
+        content: '|';
+    }
+
+    25% {
+        content: 'L|';
+    }
+
+    26% {
+        content: 'La|';
+    }
+
+    27% {
+        content: 'Laa|';
+    }
+
+    28% {
+        content: 'Laar|';
+    }
+
+    29% {
+        content: 'Laary |';
+    }
+
+    30% {
+        content: 'Laary D|';
+    }
+
+    31% {
+        content: 'Laary Da|';
+    }
+
+    32% {
+        content: 'Laary Dan|';
+    }
+
+    33% {
+        content: 'Laary Dani|';
+    }
+
+    34% {
+        content: 'Laary Danie|';
+    }
+
+    35% {
+        content: 'Laary Daniel|';
+    }
+
+    36% {
+        content: 'Laary Daniels|';
+    }
+
+    37% {
+        content: 'Laary Daniels|';
+    }
+
+    38% {
+        content: 'Laary Daniel|';
+    }
+
+    39% {
+        content: 'Laary Danie|';
+    }
+
+    40% {
+        content: 'Laary Dani|';
+    }
+
+    41% {
+        content: 'Laary Dan|';
+    }
+
+    42% {
+        content: 'Laary Da|';
+    }
+
+    44% {
+        content: 'Laary D|';
+    }
+
+    46% {
+        content: 'Laary |';
+    }
+
+    48% {
+        content: 'Laary|';
+    }
+
+    50% {
+        content: 'Laar|';
+    }
+
+    52% {
+        content: 'Laa|';
+    }
+
+    54% {
+        content: 'La|';
+    }
+
+    56% {
+        content: 'L|';
+    }
+
+    60% {
+        content: ' |';
+    }
+
+
+    62% {
+        content: '|';
+    }
+
+    64% {
+        content: 'D|';
+    }
+
+    66% {
+        content: 'De|';
+    }
+
+    68% {
+        content: 'Des|';
+    }
+
+    70% {
+        content: 'Desi|';
+    }
+
+    72% {
+        content: 'Desig|';
+    }
+
+    74% {
+        content: 'Design|';
+    }
+
+    76% {
+        content: 'Designe|';
+    }
+
+    78% {
+        content: 'Designer|';
+    }
+
+    80% {
+        content: 'Designer|';
+    }
+
+    82% {
+        content: 'Designe|';
+    }
+
+    84% {
+        content: 'Design|';
+    }
+
+    86% {
+        content: 'Desig|';
+    }
+
+    88% {
+        content: 'Desi|';
+    }
+
+    92% {
+        content: 'Des|';
+    }
+
+    94% {
+        content: 'De|';
+    }
+
+    96% {
+        content: 'D|';
+    }
+
+    98% {
+        content: '|';
+    }
+
+
+
+}
+
+.home-icon {
+
+    color: aliceblue;
+    font-size: 1rem;
+    position: absolute;
+    top: 65%;
+    left: 46%;
+}
+
+.home-icon i {
+    margin-top: 1.5rem;
+    border: solid rgba(0, 0, 0, 0.555) .625rem;
+    border-radius: 50%;
+}
+
+
+
+/*================About======*/
+.about {
+    height: 100vh;
+
+}
+
+.bg-layer-1 {
+
+    /* 
+    height: 100%;
+    background-size: cover;
+    background-position: center; */
+
+    position: absolute;
+    top: 10%;
+
+    background-image: url(../img/dots.png);
+
+}
+
+.list button :hover {
+    color: #000;
+    background-color: white;
+}
+
+.buton-bg:hover {
+    background: transparent !important;
+    color: #343434 !important;
+}
+
+.buton-bg-1:hover {
+    background: black !important;
+    color: white !important;
+}
+
+/* ======servicees===========*/
+
+.servicees-container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+
+
+}
+
+
+.services-item i {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50%;
+    transition: all 1s;
+    background-color: aliceblue;
+}
+
+.services-item:hover i {
+    background-color: black;
+
+    color: #fff
+}
+
+
+.sevices-head {
+    font-size: 48px;
+    font-weight: bolder;
+    background-image: url(../img/dots.png);
+}
+
+/* ======Work======*/
+
+#work {
+    margin-top: 100px;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.clients h1 {
+    font-size: 3rem;
+    background-image: url(../img/dots.png);
+}
+
+.cont-img {
+    overflow: hidden;
+
+    position: relative;
+}
+
+.cont-img .memmber {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: top 2s;
+}
+
+
+.cont-img:hover .memmber {
+    top: 0;
+
+}
+
+/*=========blog=======*/
+
+#blog{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.zome-in {
+
+    position: relative;
+    transition: transform 2s ease-in;
+}
+
+.zome-in:hover {
+    /* overflow: hidden; */
+    transform: scale(1.2, 1.2);
+
+}
+
+/*========contact==== */
+.contact-icon:hover i {
+    background-color: black;
+
+    color: #fff
+}
+
+
+.contact-icon i {
+    padding: .625rem;
+    background-color: rgb(135, 135, 135);
+    font-size: 4rem;
+    color: #fff;
+    border-radius: 50%;
+    border-color: rgb(0, 0, 0);
+
+}
+
+.contact-head {
+    margin: 6.25rem;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bolder;
+    background-image: url(../img/dots.png);
+}
+
+#particles-js{
+    height: 100vh;
+    background-color: #000000;
+
+}
